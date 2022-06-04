@@ -1,4 +1,73 @@
-:root
+/* header */
+*{ 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  /*set a link to give people using screen readers an option to skip the navigation and go directly to the main page content */
+  .skip-to-main-content {
+    margin-left: -900px;
+  }
+  
+  /* Fix navigation to create a sticky nav bar */
+  nav {
+    position: fixed;
+    margin-top: -20px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 0 25px;  
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    /* display-style: none; */
+  }
+  
+  nav li {
+    display: inline-block;
+    width: 70px;
+    color: white ;
+    text-align: center; 
+    padding: 10px 0;
+  }
+  nav li a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav li:active {
+    background-color: #333333;
+  }
+  
+  nav li:hover {
+    background-color: #333333;
+  }
+  
+  nav button {
+    display: none;
+  }
+  
+  /* make the nav bar adapt to small screen sizes */
+  @media (max-width: 500px) {
+      nav li {
+      display: block;
+        width: 100%;
+        border-bottom: 1px solid white;
+        padding: 5px 0;
+        
+    }
+    
+    nav {
+      padding: 10px 0 0 0;
+    }
+  }
+
+/*  end header */
+
+
+
+/* :root
   {
 --maincolor : #aaa ;
 }
@@ -7,18 +76,12 @@
     margin: auto ;
     padding: 10px ;
     color: var(--maincolor);
-    background color: #000;
+    background-color: #000;
     font-size: 14px ;
     font-family: Arial, Helvetica, sans-serif ;
     
 
-} <div class="header">
-<div class=".continar">
-<img class="  " src="img"
-<div class="links">
-<span> </span>
-<ul>
-<li><a href="#"></a></ul>}
+} 
 .header{padding:20px;}
 .header.container{
     display.flex;
@@ -28,7 +91,9 @@
 }
 .header,logo{
     width:60;
-    header.links{posion:relative;}
+    header.links{
+        posion:relative;
+    }
     .header.links.icon{
         width:30px;
         display:flex;
@@ -39,5 +104,5 @@
     .header.links.icon.span:first-shild{
         height: 3px;
         width:100px;
-    }
+    } */
 
