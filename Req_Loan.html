@@ -44,7 +44,7 @@
       <header>
 <br>
 <br>
-    <form action="result.html" method="post">
+    <form action="result.html" method="GET">
 
    
         <label for=""> الاسم الاول 
@@ -130,7 +130,7 @@
                  </td>
                </tr>
              </table>
-                <input type="submit" value="ارسال" onclick="sentdata("senddata");"></div>
+                <input type="button" value="ارسال" onclick="senddata();"></div>
     </form>
     
 </div></div>
@@ -142,17 +142,17 @@
     </div>
   </div><script>
 function senddata(){  
-      fname=documint.getElementById("idname").value;
-      fname=documint.getElementById("idname1").value;
+      fname=document.getElementById("idname").value;
+      // fname=document.getElementById("idname1").value;
       lastname=document.getElementById("idname2").value;
-      fname=document.getElementById("idname3").value;
-      fname=document.getElementById("idname4").value;
-      fname=document.getElementById("idname5").value;
-      fname=document.getElementById("idname6").value;
-      fname=document.getElementById("idname7").value;
-      fname=document.getElementById("idname8").value;
-      fname=document.getElementById("idname9").value;
-      fname=document.getElementById("idname10").value;
+      // fname=document.getElementById("idname3").value;
+      // fname=document.getElementById("idname4").value;
+      // fname=document.getElementById("idname5").value;
+      // fname=document.getElementById("idname6").value;
+      // fname=document.getElementById("idname7").value;
+      // fname=document.getElementById("idname8").value;
+      // fname=document.getElementById("idname9").value;
+      // fname=document.getElementById("idname10").value;
       var value1="value1";
       var value2="value2";
       var queryString = "?fname=" +fname + "&lastname=" +lastname;
