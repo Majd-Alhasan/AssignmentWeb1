@@ -21,56 +21,143 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Document</title>
-     <link rel="stylesheet" href="./css/style.css" />
+     <title>Document</title>    
+     <link rel="stylesheet" href="./css/style.css"/>
 
   </head>
  
  <body>
+    <div class="parent">
+    <div class="container"> 
     <header>
         <a href="#" class="skip-to-main-content">skip to main content</a>
         <nav>
           <ul>
             <li> <a href="./home.html"> home </a> </li>
+            <li> <a href="./aboutus.html"> about us</a> </li>
             <li> <a href="./products.html"> products </a> </li>
             <li> <a href="./Req_Loan.html"> rquest</a> </li>
-            <li> <a href="./aboutus.html"> about us</a> </li>
-           
+            <li><a href="./result.html">result</a></li>
           
           </ul>
         </nav>
       <header>
+<br>
+<br>
+    <form action="result.html" method="post">
 
-    <form action="">
-        <label for=""> first name  
-            <input type="text" required>    
+   
+        <label for=""> الاسم الاول 
+            <input type="text" id="idname" required autofocus>    
         </label><br>
-        <label for=""> mid name  
-                <input type="text" required>    
+        <label for=""> اسم الاب  
+                <input type="text" id="idname1" required autofocus>    
             </label><br>
-            <label for=""> last name  
-                    <input type="text" required>    
+            <label for="">الاسم الاخير  
+                    <input type="text"id="idname2" required autofocus>    
                 </label><br>
-                <lable>الرقم الوطني <input type="text"></lable><br>
+                <lable>الرقم الوطني <input type="text" id="idname3"
+                    placeholder="0100000000" required  autofocus ></lable><br><br>
             
-                <lable>تاريخ الولادة<input type="date"></lable><br>
+                <lable>تاريخ الولادة<input type="date" id="idname4" required autofocus></lable><br><br>
 
-                <lable>رقم الموبايل<input type="phone"></lable><br>
-
-                <lable> قيمة القرض<input type="number" min=1000000 max=10000000></lable><br>
-                <lable>عدد سنوات القرض<select >
+                <lable>رقم الموبايل<input type="phone" placeholder="0955555555" id="idname5" required  autofocus ></lable><br><br>
+<lable>البريد الالكتروني<input type="email" placeholder="email@gmail.com" id="idname6" reguired autofocus> </lable><br><br>
+                <lable> قيمة القرض<input type="number" min=1000000 max=10000000 id="idname7" required  autofocus ></lable><br><br>
+                <label>نوع القرض<input type="text" id="idname8" reguired autofocus></label><br><br>
+                <lable id="idname9">عدد سنوات القرض<select ><br>
                     <option value="3">3</option>
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                 </select></lable><br>
-                <lable><input type="text"></lable>
-                <lable><input type="text"></lable>
-                <lable><input type="text"></lable>
+               <br><div class="ro">
+                    <script type="text/javascript">
+                        function Captcha(id="idname10"){
+                            var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+                            var i;
+                            for (i=0;i<6;i++){
+                              var a = alpha[Math.floor(Math.random() * alpha.length)];
+                              var b = alpha[Math.floor(Math.random() * alpha.length)];
+                              var c = alpha[Math.floor(Math.random() * alpha.length)];
+                              var d = alpha[Math.floor(Math.random() * alpha.length)];
+                              var e = alpha[Math.floor(Math.random() * alpha.length)];
+                              var f = alpha[Math.floor(Math.random() * alpha.length)];
+                              var g = alpha[Math.floor(Math.random() * alpha.length)];
+                             }
+                           var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+                           document.getElementById("mainCaptcha").value = code
+                         }
+                         function ValidCaptcha(){
+                             var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+                             var string2 = removeSpaces(document.getElementById('txtInput').value);
+                             if (string1 == string2){
+                               return true;
+                             }
+                             else{        
+                               return false; 
+                               
+                             }
+                         }
+                         function removeSpaces(string){
+                           return string.split(' ').join('');
+                         }
+ 
+                    </script>    
+               </head>
+            <body onload="Captcha();">
+               <table>
+                 <tr>
+                  <td>
+                        اكتب النص<br />
+                  </td>
+                 </tr>
+                 <tr>
+                  <td>
+                    <input type="text" id="mainCaptcha"/>
+                     <input type="button" id="refresh" value="تحديث" onclick="Captcha();" />
+                  </td>
+                 </tr>
+                 <tr>
+                  <td>
+                   <input type="text" id="txtInput"/>    
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                   <input id="Button1" type="button" value="تحقق" onclick="alert(ValidCaptcha());"/>
+                 </td>
+               </tr>
+             </table>
+                <input type="submit" value="ارسال" onclick="sentdata("senddata");"></div>
     </form>
     
-
+</div></div>
+<div class="services">
+    <div class="container">
+      <h2 class="special-heading">اتصل بنا</h2>
+      <p> <img src="images/download (1).jfif">
+        <img src="images/download (2).jfif"></p></p>
+    </div>
+  </div><script>
+function senddata(){  
+      fname=documint.getElementById("idname").value;
+      fname=documint.getElementById("idname1").value;
+      lastname=document.getElementById("idname2").value;
+      fname=document.getElementById("idname3").value;
+      fname=document.getElementById("idname4").value;
+      fname=document.getElementById("idname5").value;
+      fname=document.getElementById("idname6").value;
+      fname=document.getElementById("idname7").value;
+      fname=document.getElementById("idname8").value;
+      fname=document.getElementById("idname9").value;
+      fname=document.getElementById("idname10").value;
+      var value1="value1";
+      var value2="value2";
+      var queryString = "?fname=" +fname + "&lastname=" +lastname;
+      window.location.href = "result.html" + queryString;
+}</script>
  </body>
  </html>
  

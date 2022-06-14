@@ -1,4 +1,89 @@
+
+
+body {font-family:sans-serif;
+  font-size: 16px;
+  background: #f9f9f9;
+  }
+  form {
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border:1px solid #ccc;
+    margin:50px auto 0;
+    border-radius:5px;
+  }
+  
+  
+  label {
+    display:block;
+    margin-bottom:5px;
+  }
+
+  
+  .parent{
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+    background-color:f4f4f4;
+  }
+  input[type="submit"]{
+    font-size:110%;
+    font-weght:100;
+    background: #006dcc;
+    border-color:#016bc1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor:pointer;
+  }
+  .container { 
+      
+    width:80%;
+    margin:auto;
+    text-align: center;
+    overflow: hidden;
+    background-color:f4f4f4;}
+.chapter{    width: 300px;
+  background: f4f4f4;
+  padding: 15px 40px 40px;
+text-align: center;
+  margin:50px auto 0;
+    
+      
+
+  }
+  .special-heading{
+    color:#7978;
+    font-size: 100px;
+    text-align: center;
+    font-weight:800;
+    letter-spacing: -3px;
+    margin: 0; 
+  }
+  .special-heading + p{
+    margin: -3px 0 0;
+    font-size: 20px;
+    text-align:center;
+    color:#797979
+  }
+     
+  
+ 
+  
+  
+  
+  table {color:black;font-weight:bold;
+    font-family: sans-serif;
+    font-size: 20pt;
+    background: whitesmoke;
+  }
+  
+  submit {width: 100%;
+    text-align: center;
+  color: red;}
+  
 /* header */
+
 *{ 
     margin: 0; 
     padding: 0; 
@@ -14,7 +99,7 @@
     position: fixed;
     margin-top: -20px;
     width: 100%;
-    background-color: #1a1a1a;
+    background-color: #5a5858;
     padding: 0 25px;  
   }
   
@@ -61,48 +146,4 @@
     nav {
       padding: 10px 0 0 0;
     }
-  }
-
-/*  end header */
-
-
-
-/* :root
-  {
---maincolor : #aaa ;
-}
-
-.continar {
-    margin: auto ;
-    padding: 10px ;
-    color: var(--maincolor);
-    background-color: #000;
-    font-size: 14px ;
-    font-family: Arial, Helvetica, sans-serif ;
-    
-
-} 
-.header{padding:20px;}
-.header.container{
-    display.flex;
-    justify-content:space_between;
-    align-itmes:center;
-
-}
-.header,logo{
-    width:60;
-    header.links{
-        posion:relative;
-    }
-    .header.links.icon{
-        width:30px;
-        display:flex;
-        flex-wrap:wrap;
-    }justify-content:flex-end;
-    .header.links.icon.span{background-color:333;
-    margin-bottom:5px;}
-    .header.links.icon.span:first-shild{
-        height: 3px;
-        width:100px;
-    } */
-
+/*end header*/  

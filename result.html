@@ -13,19 +13,37 @@
 
 
  </head>
- <body>
+ <body><div class="parent">
+  <div class="container">
     <header>
         <a href="#" class="skip-to-main-content">skip to main content</a>
         <nav>
           <ul>
             <li> <a href="./home.html"> home </a> </li>
+            <li> <a href="./aboutus.html"> about us</a> </li>
             <li> <a href="./products.html"> products </a> </li>
             <li> <a href="./Req_Loan.html"> rquest</a> </li>
-            <li> <a href="./aboutus.html"> about us</a> </li>
-           
+            <li><a href="./result.html">result</a></li>
           </ul>
         </nav>
-      <header>
-     
+        <script>
+ 
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            var queries = queryString.split("&");
+            for (var i = 0; i < queries.length; i++)
+            {
+              document.write(queries[i] + "<br>");
+            }
+             
+            </script> 
+        <div class="services">
+          <div class="container">
+            <h2 class="special-heading">اتصل بنا</h2>
+            <p>   <img src="images/download (1).jfif">
+            <img src="images/download (2).jfif"></p>
+          </div>
+        </div>
+    </header></div></div> 
  </body>
  </html>
