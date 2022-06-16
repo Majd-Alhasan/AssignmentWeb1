@@ -67,7 +67,16 @@ text-align: center;
     color:#797979
   }
      
-  
+  .resultt{     
+    width:auto;
+    color: #5a5858;
+    margin:auto;
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+    background-color:#fff;
+
+  }
  
   
   

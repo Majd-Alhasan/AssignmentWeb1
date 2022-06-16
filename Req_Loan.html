@@ -47,13 +47,13 @@
     <form action="result.html" method="GET">
 
    
-        <label for=""> الاسم الاول 
+        <label for=""> first-name 
             <input type="text" id="idname" required autofocus>    
         </label><br>
-        <label for=""> اسم الاب  
+        <label for=""> two-name  
                 <input type="text" id="idname1" required autofocus>    
             </label><br>
-            <label for="">الاسم الاخير  
+            <label for="">last-name  
                     <input type="text"id="idname2" required autofocus>    
                 </label><br>
                 <lable>الرقم الوطني <input type="text" id="idname3"
@@ -61,7 +61,7 @@
             
                 <lable>تاريخ الولادة<input type="date" id="idname4" required autofocus></lable><br><br>
 
-                <lable>رقم الموبايل<input type="phone" placeholder="0955555555" id="idname5" required  autofocus ></lable><br><br>
+                <lable>myphone<input type="phone" placeholder="0955555555" id="idname5" required  autofocus ></lable><br><br>
 <lable>البريد الالكتروني<input type="email" placeholder="email@gmail.com" id="idname6" reguired autofocus> </lable><br><br>
                 <lable> قيمة القرض<input type="number" min=1000000 max=10000000 id="idname7" required  autofocus ></lable><br><br>
                 <label>نوع القرض<input type="text" id="idname8" reguired autofocus></label><br><br>
@@ -130,7 +130,7 @@
                  </td>
                </tr>
              </table>
-                <input type="button" value="ارسال" onclick="senddata();"></div>
+                <input type="button" value="ارسال" onclick="send();"></div>
     </form>
     
 </div></div>
@@ -143,21 +143,60 @@
   </div><script>
 function senddata(){  
       fname=document.getElementById("idname").value;
-      // fname=document.getElementById("idname1").value;
+       tname=document.getElementById("idname1").value;
       lastname=document.getElementById("idname2").value;
-      // fname=document.getElementById("idname3").value;
-      // fname=document.getElementById("idname4").value;
-      // fname=document.getElementById("idname5").value;
-      // fname=document.getElementById("idname6").value;
-      // fname=document.getElementById("idname7").value;
-      // fname=document.getElementById("idname8").value;
-      // fname=document.getElementById("idname9").value;
-      // fname=document.getElementById("idname10").value;
-      var value1="value1";
-      var value2="value2";
-      var queryString = "?fname=" +fname + "&lastname=" +lastname;
+      idm=document.getElementById("idname3").value;
+      date=document.getElementById("idname4").value;
+      myPhone=document.getElementById("idname5").value;
+      eamil=document.getElementById("idname6").value;
+       loanamount=document.getElementById("idname7").value;
+       loantype=document.getElementById("idname8").value;
+       numberofloanyears=document.getElementById("idname9").value;
+    
+
+      var queryString = "?fname=" +fname + "&tname=" +tname + "&lastname=" +lastname  + "&idm=" +idm + "&date=" +date
+       + "&myphone=" +myPhone + "&eamil=" +eamil + "&loan amount=" +loanamount +"&loantype=" +loantype + 
+       "&numberofloanyears=" +numberofloanyears; 
       window.location.href = "result.html" + queryString;
-}</script>
+      
+}
+//function validdata(){
+//if(document.getElementById('fname').value==""){
+  //alert("enter your name");
+  //return false
+//}
+
+//}
+function validdata(){
+  var firstname = document.getElementById("idname");
+
+ var pos = firstname.value.search(/^[A-Z][a-z].?$/);
+ if (pos != 0) {
+ alert("The name you entered");
+ firstname.focus();
+ firstname.select();
+ return false;
+ } else
+ return true;
+ }
+ function chkphone(){
+ var myPhone = document.getElementById("idname5");
+
+ var pos = myPhone.value.search(/^[0][9]\d{1}-\d{3}-\d{4}$/);
+ if (pos != 0) {
+ alert("The phone number you entered (" + myPhone.value +") is not in the correct form. \n" +"The correct form is: 09d-ddd-dddd \n" +"Please go back and fix your phone number");
+ myPhone.focus();
+ myPhone.select();return false;
+ } else
+ return true;
+}
+function send(){ 
+  var validphone=chkphone();
+  var validdata=validdata();
+  if (validphone==true&&validdata==true)
+ 
+ {senddata();}
+{}}
+</script>
  </body>
  </html>
- 
