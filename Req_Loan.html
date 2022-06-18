@@ -47,34 +47,44 @@
     <form action="result.html" method="GET">
 
    
-        <label for=""> first-name 
+        <label for=""> firstname 
             <input type="text" id="idname" required autofocus>    
         </label><br>
-        <label for=""> two-name  
+        <label for=""> twoname  
                 <input type="text" id="idname1" required autofocus>    
             </label><br>
-            <label for="">last-name  
+            <label for="">lastname  
                     <input type="text"id="idname2" required autofocus>    
                 </label><br>
-                <lable>الرقم الوطني <input type="text" id="idname3"
-                    placeholder="0100000000" required  autofocus ></lable><br><br>
+                <lable>theIDnumber <input type="text" id="idname3"
+                    placeholder="010-000-0000" required  autofocus ></lable><br><br>
             
-                <lable>تاريخ الولادة<input type="date" id="idname4" required autofocus></lable><br><br>
+                <lable>date<input type="date" id="idname4" required autofocus></lable><br><br>
 
-                <lable>myphone<input type="phone" placeholder="0955555555" id="idname5" required  autofocus ></lable><br><br>
-<lable>البريد الالكتروني<input type="email" placeholder="email@gmail.com" id="idname6" reguired autofocus> </lable><br><br>
-                <lable> قيمة القرض<input type="number" min=1000000 max=10000000 id="idname7" required  autofocus ></lable><br><br>
-                <label>نوع القرض<input type="text" id="idname8" reguired autofocus></label><br><br>
-                <lable id="idname9">عدد سنوات القرض<select ><br>
+                <lable>myphone<input type="phone" placeholder="095-555-5555" id="idname5" required  autofocus ></lable><br><br>
+<lable>eamil</lable><input type="email" placeholder="email@gmail.com" id="idname6" reguired autofocus> </lable><br><br>
+                <lable>loanamount<input type="number" min=1000000 max=10000000 id="idname7" required  autofocus ></lable><br><br>
+                <label>typeloan<input type="text" id="idname8" reguired autofocus></label><br><br>
+                <lable>numberofloanyear<select id="idname9"><br>
                     <option value="3">3</option>
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                 </select></lable><br>
-               <br><div class="ro">
+               <br>
+               <lable>paymentmethod<select id="idname10"><br>
+                <option value="month">month</option>
+                <option value="fory">fory</option>
+                <option value="yeary">yeary</option>
+              
+            </select></lable><br>
+         <!--    <input type ="radio" name ="cash" value ="month" checked="checked">month
+              <input type ="radio" name ="cash" value ="on under four" >on under four
+              <input type ="radio" name ="cash" value ="year">year-->
+              <div class="ro">
                     <script type="text/javascript">
-                        function Captcha(id="idname10"){
+                        function Captcha(){
                             var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
                             var i;
                             for (i=0;i<6;i++){
@@ -142,35 +152,28 @@
     </div>
   </div><script>
 function senddata(){  
-      fname=document.getElementById("idname").value;
-       tname=document.getElementById("idname1").value;
+      firstname=document.getElementById("idname").value;
+       twoname=document.getElementById("idname1").value;
       lastname=document.getElementById("idname2").value;
-      idm=document.getElementById("idname3").value;
+      theIDnumber=document.getElementById("idname3").value;
       date=document.getElementById("idname4").value;
-      myPhone=document.getElementById("idname5").value;
+      yourPhone=document.getElementById("idname5").value;
       eamil=document.getElementById("idname6").value;
        loanamount=document.getElementById("idname7").value;
        loantype=document.getElementById("idname8").value;
        numberofloanyears=document.getElementById("idname9").value;
-    
-
-      var queryString = "?fname=" +fname + "&tname=" +tname + "&lastname=" +lastname  + "&idm=" +idm + "&date=" +date
-       + "&myphone=" +myPhone + "&eamil=" +eamil + "&loan amount=" +loanamount +"&loantype=" +loantype + 
-       "&numberofloanyears=" +numberofloanyears; 
+       capatcha=document.getElementById("txtInput").value;
+       paymentmethod=document.getElementById("idname10").value;
+      var queryString = "?firstname=" +firstname + "&twoname=" +twoname + "&lastname=" +lastname  + "&theIDnumber" +theIDnumber + "&date=" +date
+       + "&yourphone=" +yourPhone + "&eamil=" +eamil + "&loanamount=" +loanamount +"&loantype=" +loantype + 
+       "&numberofloanyears=" +numberofloanyears + "&paymentmethod=" +paymentmethod + "&capatcha=" +capatcha ; 
       window.location.href = "result.html" + queryString;
       
 }
-//function validdata(){
-//if(document.getElementById('fname').value==""){
-  //alert("enter your name");
-  //return false
-//}
-
-//}
-function validdata(){
+function valiata(){
   var firstname = document.getElementById("idname");
 
- var pos = firstname.value.search(/^[A-Z][a-z].?$/);
+ var pos = firstname.value.search(/^[A-Z][a-z]*$/);
  if (pos != 0) {
  alert("The name you entered");
  firstname.focus();
@@ -179,6 +182,52 @@ function validdata(){
  } else
  return true;
  }
+ function valiat(){
+  var twoname = document.getElementById("idname1");
+
+ var pos = twoname.value.search(/^[a-z]*$/);
+ if (pos != 0) {
+ alert("The twoname you entered");
+ twoname.focus();
+ twoname.select();
+ return false;
+ } else
+ return true;
+ }
+ function valia(){
+  var lastname = document.getElementById("idname2");
+
+ var pos = lastname.value.search(/^[a-z]*$/);
+ if (pos != 0) {
+ alert("The lastname you entered");
+ lastname.focus();
+ lastname.select();
+ return false;
+ } else
+ return true;
+ }
+ function chknum(){
+ var mPhone = document.getElementById("idname3");
+
+ var pos = mPhone.value.search(/^[0]\d{2}-\d{3}-\d{4}$/);
+ if (pos != 0) {
+ alert("The  number you entered (" + mPhone.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ mPhone.focus();
+ mPhone.select();return false;
+ } else
+ return true;
+}
+function chkdate(){
+ var date = document.getElementById("idname4");
+
+ var pos = date.value.search(/^\d{4}-\d{2}-\d{2}$/);
+ if (pos != 0) {
+ alert("The  number you entered (" + date.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ date.focus();
+ date.select();return false;
+ } else
+ return true;
+}
  function chkphone(){
  var myPhone = document.getElementById("idname5");
 
@@ -190,13 +239,83 @@ function validdata(){
  } else
  return true;
 }
+function chkeamail(){
+ var eamail = document.getElementById("idname6");
+
+ var pos = eamail.value.search(/[a-zA-Z09._%]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}$/);
+ if (pos != 0) {
+ alert("The  number you entered (" + eamail.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ eamail.focus();
+ eamail.select();return false;
+ } else
+ return true;
+}
+function valoanamount(){
+ var loanamount = document.getElementById("idname7").value;
+
+var loanamount=parseInt(loanamount);
+if (loanamount>=1000000&&loanamount<=10000000) {
+
+return true;
+} else{ alert("The loanamount false");
+
+return false;
+}}
+function valiar(){
+  var typeloan = document.getElementById("idname8");
+
+ var pos = typeloan.value.search(/[a-z]/);
+ if (pos != 0) {
+ alert("The typeloan you entered");
+ typeloan.focus();
+ typeloan.select();
+ return false;
+ } else
+ return true;
+ }
+ function valoan(){
+ var numberofloanyear = document.getElementById("idname9");
+
+var pos = numberofloanyear.value.search(/^[1-9]+$/);
+if (pos != 0) {
+alert("The numberofloanyear you entered");
+numberofloanyear.focus();
+numberofloanyear.select();
+return false;
+} else
+return true;
+}
+function valoann(){
+ var paymentmethod = document.getElementById("idname10");
+
+var pos = paymentmethod .value.search(/^[a-z]+$/);
+if (pos != 0) {
+alert("The paymentmethod  you entered");
+paymentmethod.focus();
+paymentmethod.select();
+return false;
+} else
+return true;
+}
 function send(){ 
   var validphone=chkphone();
-  var validdata=validdata();
-  if (validphone==true&&validdata==true)
+  var validdata=valiata();
+  var mphone=chknum();
+  var twoname=valiat();
+  var lastname=valia();
+  var date=chkdate();
+  var eamail=chkeamail();
+  var loanamount=valoanamount();
+    var typeloan=valiar();
+  var numberofloanyear=valoan();
+  var paymentmethod=valoan();
+  
+  var capatcha=ValidCaptcha();
+  if (validphone==true&&validdata==true&&mphone==true&&twoname==true&&lastname==true &&date==true
+  &&eamail==true&&loanamount==true&&typeloan==true&&numberofloanyear==true&&paymentmethod==true&&capatcha==true)
  
  {senddata();}
-{}}
+}
 </script>
  </body>
  </html>
