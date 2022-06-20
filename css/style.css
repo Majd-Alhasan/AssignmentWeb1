@@ -78,7 +78,19 @@ body {font-family:sans-serif;
     background: whitesmoke;
   }
  
-  
+  input[type="button"]{
+    font-size: 75%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color:#016bc1; 
+  box-shadow: 0 3px 0 #0165b6;
+  color:#fff;
+  margin-top: 10px;
+  cursor: pointer;
+  }
+  input[type="submit"]:hover{
+    background: #0165b6;
+  }
 /* header */
 
 
