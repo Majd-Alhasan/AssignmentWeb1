@@ -47,7 +47,7 @@
     <form action="result.html" method="GET">
 
    
-        <label for=""> firstname 
+        <label for=""> Firstname 
             <input type="text" id="idname" required autofocus>    
         </label><br>
         <label for=""> twoname  
@@ -74,9 +74,9 @@
                 </select></lable><br>
                <br>
                <lable>paymentmethod<select id="idname10"><br>
-                <option value="month">month</option>
-                <option value="fory">fory</option>
-                <option value="yeary">yeary</option>
+                <option value="monthly">month</option>
+                <option value="Quarterly">fory</option>
+                <option value="annual">yeary</option>
               
             </select></lable><br>
          <!--    <input type ="radio" name ="cash" value ="month" checked="checked">month
@@ -120,13 +120,13 @@
                <table>
                  <tr>
                   <td>
-                        اكتب النص<br />
+                  write the text<br />
                   </td>
                  </tr>
                  <tr>
                   <td>
                     <input type="text" id="mainCaptcha"/>
-                     <input type="button" id="refresh" value="تحديث" onclick="Captcha();" />
+                     <input type="button" id="refresh" value="Rifresh" onclick="Captcha();" />
                   </td>
                  </tr>
                  <tr>
@@ -136,11 +136,11 @@
                 </tr>
                 <tr>
                  <td>
-                   <input id="Button1" type="button" value="تحقق" onclick="alert(ValidCaptcha());"/>
+                   <input id="Button1" type="button" value="realization" onclick="alert(ValidCaptcha());"/>
                  </td>
                </tr>
-             </table>
-                <input type="button" value="ارسال" onclick="send();"></div>
+             </table> </div>
+                <input type="button" value="submission of the application" onclick="send();"></div>
     </form>
     
 </div></div>
@@ -149,7 +149,7 @@
       <h2 class="special-heading">اتصل بنا</h2>
       <p> <img src="images/download (1).jfif">
         <img src="images/download (2).jfif"></p></p>
-    </div>
+   
   </div><script>
 function senddata(){  
       firstname=document.getElementById("idname").value;
@@ -242,7 +242,7 @@ function chkdate(){
 function chkeamail(){
  var eamail = document.getElementById("idname6");
 
- var pos = eamail.value.search(/[a-zA-Z09._%]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}$/);
+ var pos = eamail.value.search(/[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}$/);
  if (pos != 0) {
  alert("The  number you entered (" + eamail.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
  eamail.focus();
