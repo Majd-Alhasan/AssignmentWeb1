@@ -24,22 +24,18 @@ body {font-family:sans-serif;
   
   label {
     display:block;
-    margin-bottom:5px;
+    margin-bottom:6px;
   }
 
   
-  .parent{
-    width:80%;
+ 
+ .submit{
+ 
+    width:100%;
     margin:auto;
-    overflow: hidden;
-    background-color:f4f4f4;
-  }
-  input[type="submit"]{
-    font-size:110%;
-    font-weght:100;
     background: #006dcc;
     border-color:#016bc1;
-    box-shadow: 0 3px 0 #0165b6;
+    
     color: #fff;
     margin-top: 10px;
     cursor:pointer;
@@ -51,15 +47,7 @@ body {font-family:sans-serif;
     text-align: center;
     overflow: hidden;
     background-color:f4f4f4;}
-.chapter{    width: 300px;
-  background: f4f4f4;
-  padding: 15px 40px 40px;
-text-align: center;
-  margin:50px auto 0;
-    
-      
 
-  }
   .special-heading{
     color:#7978;
     font-size: 100px;
@@ -68,12 +56,7 @@ text-align: center;
     letter-spacing: -3px;
     margin: 0; 
   }
-  .special-heading + p{
-    margin: -3px 0 0;
-    font-size: 20px;
-    text-align:center;
-    color:#797979
-  }
+
      
   .resultt{     
     width:auto;
@@ -94,22 +77,13 @@ text-align: center;
     font-size: 20pt;
     background: whitesmoke;
   }
-  
-  submit {width: 100%;
-    text-align: center;
-  color: red;}
+ 
   
 /* header */
 
-*{ 
-    margin: 0; 
-    padding: 0; 
-  }
-  
+
   /*set a link to give people using screen readers an option to skip the navigation and go directly to the main page content */
-  .skip-to-main-content {
-    margin-left: -900px;
-  }
+ 
   
   /* Fix navigation to create a sticky nav bar */
   nav {
@@ -152,14 +126,11 @@ text-align: center;
   }
   
   /* make the nav bar adapt to small screen sizes */
-  @media (max-width: 500px) {
-      nav li {
-      display: block;
-        width: 100%;
-        border-bottom: 1px solid white;
-        padding: 5px 0;
-        
-    }
-    
-   
-/*end header*/  
+ /* @media (max-width: 500px) {
+    nav li {
+    display: block;
+      width: 100%;
+      border-bottom: 1px solid white;
+      padding: 5px 0;
+      
+  }  */

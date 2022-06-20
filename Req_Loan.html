@@ -57,14 +57,23 @@
                     <input type="text"id="idname2" required autofocus>    
                 </label><br>
                 <lable>theIDnumber <input type="text" id="idname3"
-                    placeholder="010-000-0000" required  autofocus ></lable><br><br>
+                    placeholder="010-0000-0000" required  autofocus ></lable><br><br>
             
                 <lable>date<input type="date" id="idname4" required autofocus></lable><br><br>
 
                 <lable>myphone<input type="phone" placeholder="095-555-5555" id="idname5" required  autofocus ></lable><br><br>
 <lable>eamil</lable><input type="email" placeholder="email@gmail.com" id="idname6" reguired autofocus> </lable><br><br>
                 <lable>loanamount<input type="number" min=1000000 max=10000000 id="idname7" required  autofocus ></lable><br><br>
-                <label>typeloan<input type="text" id="idname8" reguired autofocus></label><br><br>
+            
+                <lable>typeloan<select id="idname8"><br>
+                  <option value="commercial">commercial</option>
+                  <option value="real estate">real estate</option>
+                  <option value="educational">educational</option>
+                  <option value="workshops">workshops</option>
+                  <option value="residential">residential</option>
+                  <option value="agricultural">agricultural</option>
+                  <option value="transport">transport</option>
+              </select></lable><br>
                 <lable>numberofloanyear<select id="idname9"><br>
                     <option value="3">3</option>
                     <option value="5">5</option>
@@ -74,14 +83,12 @@
                 </select></lable><br>
                <br>
                <lable>paymentmethod<select id="idname10"><br>
-                <option value="monthly">month</option>
-                <option value="Quarterly">fory</option>
-                <option value="annual">yeary</option>
+                <option value="monthly">monthly</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="annual">annual</option>
               
             </select></lable><br>
-         <!--    <input type ="radio" name ="cash" value ="month" checked="checked">month
-              <input type ="radio" name ="cash" value ="on under four" >on under four
-              <input type ="radio" name ="cash" value ="year">year-->
+      
               <div class="ro">
                     <script type="text/javascript">
                         function Captcha(){
@@ -140,8 +147,8 @@
                  </td>
                </tr>
              </table> </div>
-                <input type="button" value="submission of the application" onclick="send();"></div>
-    </form>
+          <div class="submit">      <input type="button" value="submission of the application" onclick="send();"></div>
+            </div>    </form>
     
 </div></div>
 <div class="services">
@@ -162,11 +169,11 @@ function senddata(){
        loanamount=document.getElementById("idname7").value;
        loantype=document.getElementById("idname8").value;
        numberofloanyears=document.getElementById("idname9").value;
-       capatcha=document.getElementById("txtInput").value;
+      
        paymentmethod=document.getElementById("idname10").value;
       var queryString = "?firstname=" +firstname + "&twoname=" +twoname + "&lastname=" +lastname  + "&theIDnumber" +theIDnumber + "&date=" +date
        + "&yourphone=" +yourPhone + "&eamil=" +eamil + "&loanamount=" +loanamount +"&loantype=" +loantype + 
-       "&numberofloanyears=" +numberofloanyears + "&paymentmethod=" +paymentmethod + "&capatcha=" +capatcha ; 
+       "&numberofloanyears=" +numberofloanyears + "&paymentmethod=" +paymentmethod ; 
       window.location.href = "result.html" + queryString;
       
 }
@@ -175,7 +182,7 @@ function valiata(){
 
  var pos = firstname.value.search(/^[A-Z][a-z]*$/);
  if (pos != 0) {
- alert("The name you entered");
+ alert("The Firstname you entered and the first letter must be uppercase");
  firstname.focus();
  firstname.select();
  return false;
@@ -209,9 +216,9 @@ function valiata(){
  function chknum(){
  var mPhone = document.getElementById("idname3");
 
- var pos = mPhone.value.search(/^[0]\d{2}-\d{3}-\d{4}$/);
+ var pos = mPhone.value.search(/^[0]\d{2}-\d{4}-\d{4}$/);
  if (pos != 0) {
- alert("The  number you entered (" + mPhone.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ alert("The  number you entered (" + mPhone.value +") is not in the correct form. \n" +"The correct form is: 0dd-dddd-dddd \n" +"Please go back and fix your phone number");
  mPhone.focus();
  mPhone.select();return false;
  } else
@@ -222,7 +229,7 @@ function chkdate(){
 
  var pos = date.value.search(/^\d{4}-\d{2}-\d{2}$/);
  if (pos != 0) {
- alert("The  number you entered (" + date.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ alert("The  number you entered (" + date.value +") is not in the correct form. \n" +"The correct form is: dd-dd-dddd \n" +"Please go back and fix your phone number");
  date.focus();
  date.select();return false;
  } else
@@ -244,7 +251,7 @@ function chkeamail(){
 
  var pos = eamail.value.search(/[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}$/);
  if (pos != 0) {
- alert("The  number you entered (" + eamail.value +") is not in the correct form. \n" +"The correct form is: 0dd-ddd-dddd \n" +"Please go back and fix your phone number");
+ alert("The  number you entered (" + eamail.value +") is not in the correct form. \n" +"The correct form is:eamial.com \n" +"Please go back and fix your phone number");
  eamail.focus();
  eamail.select();return false;
  } else
